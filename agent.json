@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-26T15:20:00+08:00",
+  "description": "WorkBuddy 跨终端 / 跨会话历史信息与长期记忆汇总，用于上下文延续与身份对齐。敏感凭证均已脱敏，不在此文件留存。",
+  "owner": {
+    "name": "范长青",
+    "nickname": "老大",
+    "city": "上海",
+    "assistant_name": "小城",
+    "github_login": "fcq1102",
+    "employer": "商派 Shopex（vendor 方）",
+    "primary_role": "Coach 奢侈品 OMS 运维工程师",
+    "secondary_role": "vendor 方项目经理（B2B 商城等交付项目）",
+    "employment_status": "试用期（需产出试用期工作总结报告）"
+  },
+  "communication_style": {
+    "languages": {
+      "daily_and_technical": "简体中文",
+      "business_email": "英文（习惯多轮迭代润色至满意）"
+    },
+    "traits": [
+      "简短指令式中文表达，如「开试一次」「最近的一份」",
+      "结论先行，决策时倾向直接选编号选项（常选第一个），不需详细解释",
+      "一次问一个实际问题再深入追问；常在同一对话切换多个不相关话题",
+      "初始方法失败时会尝试多种替代方案",
+      "不满意时常直接说「重新生成」，倾向整篇重做而非增量微调"
+    ],
+    "output_preferences": [
+      "结构化输出：表格、字段定义表、错误码表、双语逐词翻译表",
+      "会议纪要保留英文术语原文并标注出处（时间戳+发言人）",
+      "产出要求 PPT-ready（可直接放入 PPT）并附中文分析摘要",
+      "翻译 PDF 时保留原页面结构、内容顺序与图片（含图片内文字）",
+      "图表风格先确认现状/术语，再迭代：柱状→堆叠→按优先级堆叠"
+    ]
+  },
+  "long_term_rules": [
+    "文档管理统一走 GitHub：生成的文档默认用 GitHub 仓库管理（建版本、提交变更、追踪历史），文档仓库为 fcq1102/docs",
+    "GitHub 读写走本机钥匙串 token + api.github.com，连接器 GitHub App 无写权限；禁止明文落盘凭证",
+    "工作文件统一放指定目录（路径已脱敏），文档根目录固定",
+    "npm 已配淘宝镜像；Homebrew 已配国内镜像"
+  ],
+  "work_context": {
+    "primary_domains": [
+      "Coach 奢侈品 OMS 日常运维（SFTP：WMS sftp_prod_wms / LMS sftp_prod_lms，含 RET/SHP/STORE_MASTER CSV）",
+      "OMNIHUB / omniportal 运营与账号权限管理、portal 适配器业务流程",
+      "玛氏（Mars）旗下「冠军」项目 CPF Project Plan_Global（目标节点 2026-08-16）",
+      "玛氏二期 OMS-SAP 对账数据源规范",
+      "China RTM OMS↔M3 接口文档维护",
+      "安全合规：ISO 27001 年审、SOC 2 Type 2、BC/DR、供应商尽调、Snyk 漏洞报告",
+      "B2B 商城项目（vendor 方项目经理）：ICP 备案 / 网安等保 / 公安联网备案"
+    ],
+    "recurring_deliverables": [
+      "OMNIHUB / omniportal 日常运维月报（含日常运维日志）",
+      "Shopex TAP OMS 月报（物流 / OMS-WMS / Portal 等服务器维度）",
+      "含服务器维度的运维周报",
+      "面向甲方的 B2B 商城项目周报 / 月报",
+      "试用期工作总结报告"
+    ],
+    "key_projects": [
+      {
+        "name": "CPF 冠军项目",
+        "scope": "OMS↔M3 接口/API 评审（信用余额、返利、SSO），MS/CPF 团队间协作",
+        "deadline": "2026-08-16"
+      },
+      {
+        "name": "B2B 商城项目",
+        "scope": "ICP/网安等保/公安联网备案合规流程；协助甲方提供生产/测试域名、微信开放平台资质",
+        "role": "vendor 方项目经理"
+      },
+      {
+        "name": "China RTM 接口文档",
+        "scope": "CustomerOrder / InventoryBalance / ProductMaster / CustomerAddresses / CustomerMaster"
+      },
+      {
+        "name": "安全合规翻译",
+        "scope": "「2026 商派安全解决方案」28 页中文 PDF 英文化（保留页面结构与图片内文字）；安全/审计问卷中英逐词对照表"
+      }
+    ]
+  },
+  "recent_activities": [
+    "打通 GitHub 文档仓库：连接器只读、gh CLI 受网络与 Intel Mac 限制装不上，最终从钥匙串取 GitHub Desktop token 走 API 实现读写",
+    "在 fcq1102/docs 建立四大目录结构：运维、项目交付、合规、接口文档，各含归档范围说明",
+    "封装 .workbuddy/scripts/gh_docs.py 支持中文路径的 list/read/write/delete",
+    "持续推进 CPF 冠军项目 OMS↔M3 接口评审与 B2B 商城备案流程",
+    "按月输出 OMNIHUB 与 Shopex TAP OMS 运维月报",
+    "处理 Snyk 漏洞报告、ISO 27001 年审与供应商尽调问卷",
+    "撰写账号安全类 BRD/PRD（密码策略、登录验证），采用表格+编号章节结构"
+  ],
+  "tool_environment": {
+    "os": "macOS（Intel x86_64）",
+    "shell": "zsh",
+    "homebrew": "已配国内镜像；Intel 新版无 gh bottle，源码编译不可行",
+    "network": "仅 api.github.com 可达；github.com 下载 / git clone:443 被代理拦截",
+    "github_access": {
+      "token_source": "macOS 钥匙串 service: GitHub - https://api.github.com（GitHub Desktop 登录凭证，gho_ 开头）",
+      "token_prefix": "gho_（脱敏）",
+      "storage": "不明文落盘，实时从钥匙串读取",
+      "helper_script": ".workbuddy/scripts/gh_docs.py",
+      "connector_status": "github 连接器已连接，GitHub App 有读权限、无写权限（403 Resource not accessible by integration）"
+    },
+    "editors": ["VS Code（Remote Tunnel 支持手机端开发）", "Terminal Claude Code（主力）", "Codex CLI"],
+    "collaboration": ["Microsoft Teams（跨国会议，含英文转录）", "飞书（OMNIHUB 多维表格、知识库）", "语雀（IT 流程文档）", "TB/TAPD（任务跟踪）"],
+    "ai_tools": ["WorkBuddy ≥4.6.4（Claw 集成手机微信）", "Claude Code", "Codex CLI"],
+    "debug_ports": "Chrome 远程调试端口 9222/9223/9333/9229（按需开启）"
+  },
+  "security_notes": {
+    "desensitized": true,
+    "excluded": ["GitHub token 明文", "SFTP 账号密码与路径", "飞书多维表格 base_token", "个人邮箱等凭证"],
+    "policy": "凭证类信息一律从钥匙串或安全存储实时读取，禁止写入文档/JSON/日志"
+  },
+  "continuity": {
+    "memory_files": [
+      "用户级 MEMORY.md（跨项目长期规则）",
+      "工作区 .workbuddy/memory/YYYY-MM-DD.md（每日工作日志）",
+      "用户级 SOUL.md / IDENTITY.md / USER.md（身份与画像）"
+    ],
+    "last_updated": "2026-11-26",
+    "note": "本文件为跨终端记忆快照，后续如有重要变化应同步更新"
+  }
+}
