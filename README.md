@@ -4,7 +4,7 @@
 
 - 所有文档通过 Git 追踪版本与变更记录
 - 目录结构按项目/主题分类维护
-- 文档本地写完后由 WorkBuddy 自动 `git add → commit → push` 提交推送（走 git 通道）
+- 文档本地写完后由 WorkBuddy 自动 `git add → commit → pull --rebase → push` 提交推送（走 git 通道）
 
 ## 目录结构
 
